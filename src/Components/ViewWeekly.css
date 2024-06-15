@@ -1,0 +1,40 @@
+.habits-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .table-header {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .table-header-cell {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .table-row {
+    border: 1px solid #ccc;
+  }
+  
+  .table-cell {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .action-cell {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .check-icon {
+    color: #28a745;
+  }
+  
+  .times-icon {
+    color: #dc3545;
+  }
+  

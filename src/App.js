@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './Components/NavBar';
+import AddHabit from './Components/AddHabit';
+import ViewWeekly from './Components/ViewWeekly';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [currentPage, setCurrentPage] = useState('add'); // 'add' or 'view-weekly'
+
+    const renderPage = () => {
+        switch (currentPage) {
+            case 'add':
+                return <AddHabit />;
+            case 'view-weekly':
+                return <ViewWeekly />;
+            default:
+                return <AddHabit />;
+        }
+    };
+
+    return (
+        <>
+            <NavBar setCurrentPage={setCurrentPage} />
+            <div className="container mt-5">
+                {renderPage()}
+            </div>
+        </>
+    );
+};
 
 export default App;
